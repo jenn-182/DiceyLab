@@ -27,7 +27,7 @@ public class Dice {
     public Integer tossAndSum() { 
         int sum = 0;
         //loop through the number of dice
-        //and generate a random number between 1 and 6 for each die
+        //generate a random number between 1 and 6 for each die
         for (int i = 0; i < numberOfDies; i++) {
             sum = sum + (random.nextInt(6) + 1); 
         }
@@ -37,21 +37,6 @@ public class Dice {
     // Returns the number of dies
     public int getNumberOfDies() {
         return numberOfDies;
-    }
-
-public static void main(String[] args) {
-
-    Dice myDice = new Dice(2);
-    Dice myDice2 = new Dice(5);
-
-    Integer roll1 = myDice.tossAndSum();
-    Integer roll2 = myDice2.tossAndSum();
-
-    System.out.println("Roll 1: " + roll1);
-    System.out.println("Roll 2: " + roll2);
-
-    System.out.println("Number of dies in roll 1: " + myDice.getNumberOfDies());
-    System.out.println("Number of dies in roll 2: " + myDice2.getNumberOfDies());
     }
 }
 
