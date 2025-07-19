@@ -1,3 +1,4 @@
+package com.example;
 import java.text.DecimalFormat;
 
 //---SUMMARY-----
@@ -171,5 +172,9 @@ public class Simulation {
        
         simulation.runSimulation();
         simulation.printResults();
+    }
+
+    public Bins getResults() {
+        return results;
     }
 }

@@ -1,3 +1,5 @@
+package com.example;
+
 import java.util.Random;
 
 //---SUMMARY-----
@@ -5,7 +7,7 @@ import java.util.Random;
 //The Dice class is a factory that makes dice sets
 // When you make a new set (new Dice(2)), it remembers how many dice are in it
 // When you tell it to tossAndSum(), it rolls each of its dice randomly (from 1 to 6) and gives you the total
-// You can also ask it getNumberOfDies() to find out how many dice are in that set
+// You can also ask it getNumberOfDice() to find out how many dice are in that set
 
 
 //---Blue Print for Dice Factory---
@@ -21,15 +23,16 @@ public class Dice {
 
     Random random = new Random();
 
-    private int numberOfDies; // How many dice are in this set?
+    private int numberOfDice; // How many dice are in this set?
 
-    public Dice(int numberOfDies) {
+    public Dice(int numberOfDice) {
 
-        if (numberOfDies <= 0) {
-            System.out.println("Number of dies must be greater than 0");
+        if (numberOfDice <= 0) {
+            System.out.println("Number of dice must be greater than 0");
+            this.numberOfDice = 0; // default to 0 dice
             return;
         } else {
-            this.numberOfDies = numberOfDies; //sets the number of dice in this set
+            this.numberOfDice = numberOfDice; //sets the number of dice in this set
         }
         
         //Initialize the random number generator
@@ -51,21 +54,21 @@ public class Dice {
     public Integer tossAndSum() { 
         int sum = 0;
        
-        for (int i = 0; i < numberOfDies; i++) {
+        for (int i = 0; i < numberOfDice; i++) {
             sum = sum + (random.nextInt(6) + 1); //random number between 1 and 6
         }
         return sum;
     }
 
 
-    //------Get Number of Dies------
+    //------Get Number of Dice------
 
     // Purpose: Get information; doesnt change anything
     // Think of it like: Asking your Dice toy "How many dice do you have?"
 
-    // Returns the number of dies
-    public int getNumberOfDies() {
-        return numberOfDies;
+    // Returns the number of dice
+    public int getNumberOfDice() {
+        return numberOfDice;
     }
 }
 

@@ -1,3 +1,5 @@
+package com.example;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,7 +20,7 @@ import java.util.Map;
 
 public class Bins {
 
-    // Variables f
+    // Variables 
     private int min;
     private int max;
 
@@ -105,8 +107,8 @@ public class Bins {
     //----- Return Min, Max, and Total Rolls -----
 
     // Purpose: Get the minimum and maximum bin numbers and the total number of rolls
-    //Act as labels on our counting machine and tells us settings and overall progress
-    //They just GIVE you information, they dont change anything
+    // Act as labels on our counting machine and tells us settings and overall progress
+    // They just GIVE you information, they dont change anything
 
     public int getMin() {
         return min;
